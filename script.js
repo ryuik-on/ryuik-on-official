@@ -82,7 +82,7 @@ document.querySelectorAll(".gallery-item").forEach(item => item.addEventListener
 document.getElementById("movieButton").addEventListener("click", () => {
   modalBody.innerHTML = `
     <video class="site-movie-player" controls autoplay playsinline
-      poster="./assets/ryuik-on-movie-poster.jpg">
+      poster="./assets/crowd.jpg">
       <source src="./assets/ryuik-on-movie.mp4" type="video/mp4">
       お使いのブラウザは動画再生に対応していません。
     </video>`;
