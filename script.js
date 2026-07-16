@@ -34,24 +34,24 @@ sections.forEach(section => sectionObserver.observe(section));
 
 const seasons = {
   apr: [
-    { name: "新歓ライブ", meta: "APR–MAY / LIVE", img: "./assets/live-wide.jpg" },
-    { name: "九山", meta: "MAY / EVENT", img: "./assets/venue.jpg" },
-    { name: "3年生主催ライブ", meta: "JUN / LIVE", img: "./assets/crowd.jpg" }
+    { name: "新歓ライブ", meta: "LIVE", img: "./assets/live-wide.jpg" },
+    { name: "九山", meta: "EVENT", img: "./assets/venue.jpg" },
+    { name: "3年生主催ライブ", meta: "LIVE", img: "./assets/crowd.jpg" }
   ],
   jul: [
-    { name: "合宿", meta: "JUL / 津堅島", img: "./assets/camp.jpg" },
-    { name: "アルバム撮影", meta: "JUL / PHOTO", img: "./assets/venue.jpg" },
-    { name: "琉大祭", meta: "SEP / 千原キャンパス", img: "./assets/crowd.jpg" }
+    { name: "合宿", meta: "津堅島", img: "./assets/camp.jpg" },
+    { name: "アルバム撮影", meta: "PHOTO", img: "./assets/venue.jpg" },
+    { name: "琉大祭", meta: "千原キャンパス", img: "./assets/crowd.jpg" }
   ],
   oct: [
-    { name: "ハロウィンライブ", meta: "OCT / 部室", img: "./assets/keyboard.jpg" },
-    { name: "ONE-MAN LIVE ROOM", meta: "NOV / テンブスホール", img: "./assets/venue.jpg" },
-    { name: "クリスマスライブ", meta: "DEC / LIVE", img: "./assets/live-wide.jpg" }
+    { name: "ハロウィンライブ", meta: "部室", img: "./assets/keyboard.jpg" },
+    { name: "ONE-MAN LIVE ROOM", meta: "テンブスホール", img: "./assets/venue.jpg" },
+    { name: "琉大祭後ペンション", meta: "EVENT", img: "./assets/camp.jpg" }
   ],
   jan: [
-    { name: "新年会ライブ", meta: "JAN / LIVE", img: "./assets/live-wide.jpg" },
-    { name: "OBOGライブ・五大祭", meta: "FEB / LIVE", img: "./assets/crowd.jpg" },
-    { name: "留送会ライブ", meta: "MAR / LIVE", img: "./assets/venue.jpg" }
+    { name: "クリスマスライブ", meta: "LIVE", img: "./assets/live-wide.jpg" },
+    { name: "五大祭", meta: "LIVE", img: "./assets/crowd.jpg" },
+    { name: "留送会", meta: "LIVE / EVENT", img: "./assets/venue.jpg" }
   ]
 };
 const seasonGrid = document.getElementById("seasonGrid");
@@ -81,16 +81,30 @@ document.querySelectorAll(".gallery-item").forEach(item => item.addEventListener
 
 document.getElementById("movieButton").addEventListener("click", () => {
   modalBody.innerHTML = `
-    <div class="movie-placeholder">
-      <h2>MOVIE</h2>
-      <p>動画URLまたはMP4ファイルを接続すると、<br>ここでサイト内再生されます。</p>
-      <p style="font-size:12px">script.js の movieButton 処理を差し替えてください。</p>
-    </div>`;
+    <video class="site-movie-player" controls autoplay playsinline
+      poster="./assets/ryuik-on-movie-poster.jpg">
+      <source src="./assets/ryuik-on-movie.mp4" type="video/mp4">
+      お使いのブラウザは動画再生に対応していません。
+    </video>`;
   modal.showModal();
 });
 modalClose.addEventListener("click", () => modal.close());
 modal.addEventListener("click", e => { if (e.target === modal) modal.close(); });
 
 document.getElementById("galleryMore").addEventListener("click", () => {
-  document.getElementById("gallery").scrollIntoView({ behavior: "smooth", block: "start" });
+  const grid = document.getElementById("galleryGrid");
+  const button = document.getElementById("galleryMore");
+  const expanded = grid.classList.toggle("is-expanded");
+  button.innerHTML = expanded
+    ? 'CLOSE <span aria-hidden="true">↑</span>'
+    : 'VIEW MORE <span aria-hidden="true">→</span>';
+});
+
+modal.addEventListener("close", () => {
+  const video = modalBody.querySelector("video");
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+  modalBody.innerHTML = "";
 });
