@@ -94,12 +94,14 @@ button { color: inherit; font: inherit; }
 .room-feature__media {
   position: absolute;
   inset: 0;
-  background-image: url("./assets/room-feature.png");
+  background-image: url("./assets/room-feature.jpg");
   background-color: #000;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right center;
-  filter: brightness(.72) contrast(1.05) saturate(.82);
+  -webkit-mask-image: linear-gradient(90deg, transparent 24%, #000 44%);
+  mask-image: linear-gradient(90deg, transparent 24%, #000 44%);
+  filter: brightness(.68) contrast(1.06) saturate(.78);
 }
 .room-feature__shade {
   position: absolute;
@@ -461,6 +463,8 @@ button { color: inherit; font: inherit; }
   .room-feature__media {
     background-size: cover;
     background-position: center;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .room-feature__shade {
     background: linear-gradient(
