@@ -57,7 +57,13 @@ const seasons = {
     }
   ],
   jul: [
-    { name: "合宿", meta: "津堅島", img: "./assets/camp.jpg" },
+    {
+      name: "合宿",
+      meta: "津堅島",
+      img: "./assets/gallery-camp-tsuken.jpg",
+      alt: "海を望む津堅島でのライブ",
+      position: "50% 52%"
+    },
     { name: "アルバム撮影", meta: "PHOTO", img: "./assets/venue.jpg" },
     {
       name: "琉大祭",
