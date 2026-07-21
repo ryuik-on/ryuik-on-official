@@ -95,8 +95,10 @@ button { color: inherit; font: inherit; }
   position: absolute;
   inset: 0;
   background-image: url("./assets/room-feature.png");
-  background-size: cover;
-  background-position: center;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right center;
   filter: brightness(.72) contrast(1.05) saturate(.82);
 }
 .room-feature__shade {
@@ -456,7 +458,10 @@ button { color: inherit; font: inherit; }
 
   .hero__logo { width: min(390px, 88vw); }
   .room-feature { min-height: 760px; align-items: end; }
-  .room-feature__media { background-position: center; }
+  .room-feature__media {
+    background-size: cover;
+    background-position: center;
+  }
   .room-feature__shade {
     background: linear-gradient(
       0deg,
