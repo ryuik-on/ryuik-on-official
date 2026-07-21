@@ -51,9 +51,9 @@ const seasons = {
     {
       name: "3年生主催ライブ",
       meta: "LIVE",
-      img: "./assets/season-third-year-live.jpg",
-      alt: "ライブを終えてステージ上に並ぶ部員たち",
-      position: "50% 74%"
+      img: "./assets/season-third-year-live-purple.jpg",
+      alt: "紫の照明に包まれたステージで演奏する部員たち",
+      position: "50% 52%"
     }
   ],
   jul: [
@@ -75,7 +75,13 @@ const seasons = {
       alt: "ハロウィンの仮装をして集まった部員たち",
       position: "50% 54%"
     },
-    { name: "ONE-MAN LIVE ROOM", meta: "テンブスホール", img: "./assets/venue.jpg" },
+    {
+      name: "ONE-MAN LIVE ROOM",
+      meta: "テンブスホール",
+      img: "./assets/room-feature.jpg",
+      alt: "ライブを終えてステージ上で肩を組む部員たち",
+      position: "50% 50%"
+    },
     {
       name: "琉大祭後ペンション",
       meta: "EVENT",
@@ -90,10 +96,16 @@ const seasons = {
       meta: "LIVE",
       img: "./assets/season-christmas-live.jpg",
       alt: "サンタ帽をかぶって笑顔を見せる部員たち",
-      position: "50% 40%"
+      position: "50% 20%"
     },
     { name: "五大祭", meta: "LIVE", img: "./assets/crowd.jpg" },
-    { name: "留送会", meta: "LIVE / EVENT", img: "./assets/venue.jpg" }
+    {
+      name: "留送会",
+      meta: "LIVE / EVENT",
+      img: "./assets/season-ryusokai.jpg",
+      alt: "ライブを終えてステージ上に並ぶ部員たち",
+      position: "50% 58%"
+    }
   ]
 };
 const seasonGrid = document.getElementById("seasonGrid");
