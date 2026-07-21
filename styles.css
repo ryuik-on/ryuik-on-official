@@ -94,9 +94,9 @@ button { color: inherit; font: inherit; }
 .room-feature__media {
   position: absolute;
   inset: 0;
-  background-image: url("./assets/venue.jpg");
+  background-image: url("./assets/room-feature.png");
   background-size: cover;
-  background-position: 56% 50%;
+  background-position: center;
   filter: brightness(.72) contrast(1.05) saturate(.82);
 }
 .room-feature__shade {
@@ -456,7 +456,7 @@ button { color: inherit; font: inherit; }
 
   .hero__logo { width: min(390px, 88vw); }
   .room-feature { min-height: 760px; align-items: end; }
-  .room-feature__media { background-position: 62% center; }
+  .room-feature__media { background-position: center; }
   .room-feature__shade {
     background: linear-gradient(
       0deg,
