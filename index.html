@@ -87,7 +87,7 @@
       <div class="about__copy">
         <h2 class="section-title" id="about-title">ABOUT</h2>
         <p>音楽がきっかけで集まり、<br>ライブを通してつながる。<br>それが、Ryuik-on。</p>
-        <a class="text-link" href="#seasons">MORE ABOUT US <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="#seasons">OUR ACTIVITIES <span aria-hidden="true">→</span></a>
       </div>
       <figure class="about__visual">
         <img src="./assets/camp.jpg" alt="屋外で音楽を囲む部員たち" />
@@ -113,14 +113,18 @@
 
     <section class="movie" id="movie" aria-labelledby="movie-title">
       <div class="movie__title">
-        <h2 class="section-title" id="movie-title">MOVIE</h2>
+        <div class="movie__title-copy">
+          <p class="movie__eyebrow">MEMBER-MADE FILM</p>
+          <h2 class="section-title" id="movie-title">RYUIK-ON MOVIE</h2>
+          <p class="movie__description">部員が撮影・編集した、Ryuik-onの活動を届けるオリジナルムービー。</p>
+        </div>
         <p class="movie__credit">FILMED &amp; EDITED BY <span>Maika Miyazato</span></p>
       </div>
       <button class="movie__poster" id="movieButton" type="button" aria-label="部員制作ムービーを再生">
         <img src="./assets/crowd.jpg" alt="青い照明の中で観客が手を上げるライブ写真" />
         <span class="movie__overlay"></span>
         <span class="movie__play" aria-hidden="true">▶</span>
-        <span class="movie__label">PLAY</span>
+        <span class="movie__label">WATCH MOVIE</span>
       </button>
     </section>
 
@@ -130,20 +134,23 @@
         <button class="text-button" id="galleryMore" type="button">VIEW MORE <span aria-hidden="true">→</span></button>
       </div>
       <div class="gallery-grid" id="galleryGrid">
-        <button class="gallery-item gallery-item--lead" data-src="./assets/crowd.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
-          <img src="./assets/crowd.jpg" alt="観客が手を上げるライブ" />
-        </button>
-        <button class="gallery-item gallery-item--extra is-hidden" data-src="./assets/keyboard.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
+        <button class="gallery-item" data-src="./assets/keyboard.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
           <img src="./assets/keyboard.jpg" alt="照明を浴びるキーボード奏者" />
-        </button>
-        <button class="gallery-item" data-src="./assets/gallery-camp-tsuken.jpg" data-caption="CAMP / PHOTO: Ryuik-on">
-          <img src="./assets/gallery-camp-tsuken.jpg" alt="海を望む津堅島でのライブ" />
         </button>
         <button class="gallery-item" data-src="./assets/live-wide.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
           <img src="./assets/live-wide.jpg" alt="撮影モニター越しのステージ" />
         </button>
-        <button class="gallery-item gallery-item--wide gallery-item--extra is-hidden" data-src="./assets/venue.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
+        <button class="gallery-item" data-src="./assets/venue.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
           <img src="./assets/venue.jpg" alt="会場上方から見た演奏者と観客" />
+        </button>
+        <button class="gallery-item gallery-item--poster" data-src="./assets/room-solo-poster.png" data-caption="ROOM / ONE-MAN LIVE">
+          <img src="./assets/room-solo-poster.png" alt="ギタリストを写したONE-MAN LIVE ROOMの告知ビジュアル" />
+        </button>
+        <button class="gallery-item gallery-item--extra is-hidden" data-src="./assets/crowd.jpg" data-caption="LIVE / PHOTO: Ryuik-on">
+          <img src="./assets/crowd.jpg" alt="観客が手を上げるライブ" />
+        </button>
+        <button class="gallery-item gallery-item--extra is-hidden" data-src="./assets/gallery-camp-tsuken.jpg" data-caption="CAMP / PHOTO: Ryuik-on">
+          <img src="./assets/gallery-camp-tsuken.jpg" alt="海を望む津堅島でのライブ" />
         </button>
       </div>
     </section>
@@ -171,6 +178,10 @@
         <a href="https://www.instagram.com/ryuikeion/" target="_blank" rel="noreferrer">
           <img src="./assets/live-wide.jpg" alt="ライブ写真のイメージ" />
           <span>NEWS</span>
+        </a>
+        <a class="instagram-grid__poster" href="https://www.instagram.com/ryuikeion/" target="_blank" rel="noreferrer">
+          <img src="./assets/room-solo-poster.png" alt="ONE-MAN LIVE ROOMの告知ビジュアル" />
+          <span>ROOM</span>
         </a>
       </div>
 
