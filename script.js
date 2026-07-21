@@ -34,22 +34,64 @@ sections.forEach(section => sectionObserver.observe(section));
 
 const seasons = {
   apr: [
-    { name: "新歓ライブ", meta: "LIVE", img: "./assets/live-wide.jpg" },
-    { name: "九山", meta: "EVENT", img: "./assets/venue.jpg" },
-    { name: "3年生主催ライブ", meta: "LIVE", img: "./assets/crowd.jpg" }
+    {
+      name: "新歓ライブ",
+      meta: "LIVE",
+      img: "./assets/season-shinkan-live.jpg",
+      alt: "青と赤の照明に包まれたステージで演奏する部員たち",
+      position: "50% 52%"
+    },
+    {
+      name: "九山",
+      meta: "EVENT",
+      img: "./assets/season-kyuzan.jpg",
+      alt: "大きなステージで観客に向かって演奏する部員たち",
+      position: "50% 50%"
+    },
+    {
+      name: "3年生主催ライブ",
+      meta: "LIVE",
+      img: "./assets/season-third-year-live.jpg",
+      alt: "ライブを終えてステージ上に並ぶ部員たち",
+      position: "50% 74%"
+    }
   ],
   jul: [
     { name: "合宿", meta: "津堅島", img: "./assets/camp.jpg" },
     { name: "アルバム撮影", meta: "PHOTO", img: "./assets/venue.jpg" },
-    { name: "琉大祭", meta: "千原キャンパス", img: "./assets/crowd.jpg" }
+    {
+      name: "琉大祭",
+      meta: "千原キャンパス",
+      img: "./assets/season-ryudaisai.jpg",
+      alt: "観客で埋まった会場の奥で演奏する部員たち",
+      position: "50% 64%"
+    }
   ],
   oct: [
-    { name: "ハロウィンライブ", meta: "部室", img: "./assets/keyboard.jpg" },
+    {
+      name: "ハロウィンライブ",
+      meta: "部室",
+      img: "./assets/season-halloween-live.jpg",
+      alt: "ハロウィンの仮装をして集まった部員たち",
+      position: "50% 54%"
+    },
     { name: "ONE-MAN LIVE ROOM", meta: "テンブスホール", img: "./assets/venue.jpg" },
-    { name: "琉大祭後ペンション", meta: "EVENT", img: "./assets/camp.jpg" }
+    {
+      name: "琉大祭後ペンション",
+      meta: "EVENT",
+      img: "./assets/season-pension.jpg",
+      alt: "琉大祭後にペンションで交流する部員たち",
+      position: "50% 50%"
+    }
   ],
   jan: [
-    { name: "クリスマスライブ", meta: "LIVE", img: "./assets/live-wide.jpg" },
+    {
+      name: "クリスマスライブ",
+      meta: "LIVE",
+      img: "./assets/season-christmas-live.jpg",
+      alt: "サンタ帽をかぶって笑顔を見せる部員たち",
+      position: "50% 40%"
+    },
     { name: "五大祭", meta: "LIVE", img: "./assets/crowd.jpg" },
     { name: "留送会", meta: "LIVE / EVENT", img: "./assets/venue.jpg" }
   ]
@@ -58,7 +100,7 @@ const seasonGrid = document.getElementById("seasonGrid");
 function renderSeason(key) {
   seasonGrid.innerHTML = seasons[key].map(item => `
     <article class="season-card">
-      <img src="${item.img}" alt="">
+      <img src="${item.img}" alt="${item.alt || ""}" style="object-position: ${item.position || "50% 50%"}">
       <h3>${item.name}</h3>
       <p>${item.meta}</p>
     </article>
