@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ryuik-on.github.io/ryuik-on-official/sitemap.xml
